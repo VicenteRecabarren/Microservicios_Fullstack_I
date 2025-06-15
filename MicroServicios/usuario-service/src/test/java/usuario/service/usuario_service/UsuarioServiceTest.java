@@ -1,9 +1,11 @@
 package usuario.service.usuario_service;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.web.client.RestTemplate;
 import usuario.service.usuario_service.Entidades.Usuario;
 import usuario.service.usuario_service.Repositorio.UsuarioRepositorio;
 import usuario.service.usuario_service.Servicio.UsuarioServicio;
@@ -16,13 +18,19 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.Mockito.*;
 
-@SpringBootTest
+@ExtendWith(MockitoExtension.class)
 public class UsuarioServiceTest {
 
-    @MockBean
+    @Mock
     private UsuarioRepositorio usuarioRepositorio;
+    
+    @Mock
+    private RestTemplate restTemplate;
+    
+    @Mock
+    private RestTemplate restTemplate2;
 
-    @Autowired
+    @InjectMocks
     private UsuarioServicio usuarioServicio;
 
     @Test
@@ -43,7 +51,7 @@ public class UsuarioServiceTest {
         when(usuarioRepositorio.findAll()).thenReturn(usuarios);
 
         // Act
-        List<Usuario> resultado = usuarioServicio.obtenerTodos();
+        List<Usuario> resultado = usuarioServicio.getAll();
 
         // Assert
         assertEquals(2, resultado.size());
@@ -61,7 +69,7 @@ public class UsuarioServiceTest {
         when(usuarioRepositorio.findById(1)).thenReturn(Optional.of(usuario));
 
         // Act
-        Usuario resultado = usuarioServicio.obtenerPorId(1);
+        Usuario resultado = usuarioServicio.getUsuarioById(1);
 
         // Assert
         assertNotNull(resultado);

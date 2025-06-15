@@ -1,9 +1,10 @@
 package alerta.service.alerta_service;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 import alerta.service.alerta_service.Entidades.Alerta;
 import alerta.service.alerta_service.Repositorio.AlertaRepositorio;
 import alerta.service.alerta_service.Servicio.AlertaServicio;
@@ -16,13 +17,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.Mockito.*;
 
-@SpringBootTest
+@ExtendWith(MockitoExtension.class)
 public class AlertaServiceTest {
 
-    @MockBean
+    @Mock
     private AlertaRepositorio alertaRepositorio;
 
-    @Autowired
+    @InjectMocks
     private AlertaServicio alertaServicio;
 
     @Test

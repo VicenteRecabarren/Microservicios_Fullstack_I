@@ -18,6 +18,7 @@ public class UsuarioServicio {
     private RestTemplate restTemplate;
 
     public List<Rol> getRoles(int usuarioId){
+        @SuppressWarnings("unchecked")
         List<Rol> roles = restTemplate.getForObject("http://localhost:8002/rol/usuario/"+usuarioId, List.class);
         return roles;
     }
@@ -26,8 +27,17 @@ public class UsuarioServicio {
     private RestTemplate restTemplate2;
 
     public List<Curso> getCursos(int usuarioId){
+        @SuppressWarnings("unchecked")
         List<Curso> cursos = restTemplate2.getForObject("http://localhost:8003/curso/usuario/"+usuarioId, List.class);
         return cursos;
+    }
+    
+    public List<Usuario> obtenerTodos() {
+        return getAll();
+    }
+    
+    public Usuario obtenerPorId(int id) {
+        return getUsuarioById(id);
     }
 
     @Autowired

@@ -1,0 +1,9 @@
+usuario\service\usuario_service\Servicio\UsuarioServicio.class
+usuario\service\usuario_service\Configuracion\SwaggerConfig.class
+usuario\service\usuario_service\Controlador\UsuarioControlador.class
+usuario\service\usuario_service\Configuracion\RestTemplateConfig.class
+usuario\service\usuario_service\Repositorio\UsuarioRepositorio.class
+usuario\service\usuario_service\Modelo\Rol.class
+usuario\service\usuario_service\Entidades\Usuario.class
+usuario\service\usuario_service\UsuarioServiceApplication.class
+usuario\service\usuario_service\Modelo\Curso.class

@@ -1,9 +1,10 @@
 package rol.service.rol_service;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 import rol.service.rol_service.Entidades.Rol;
 import rol.service.rol_service.Repositorio.RolRepositorio;
 import rol.service.rol_service.Servicio.RolServicio;
@@ -16,18 +17,17 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.Mockito.*;
 
-@SpringBootTest
+@ExtendWith(MockitoExtension.class)
 public class RolServiceTest {
 
-    @MockBean
+    @Mock
     private RolRepositorio rolRepositorio;
 
-    @Autowired
+    @InjectMocks
     private RolServicio rolServicio;
 
     @Test
     void testObtenerTodos() {
-
         Rol rol1 = new Rol();
         rol1.setId(1);
         rol1.setNombre("ADMIN");
@@ -42,7 +42,7 @@ public class RolServiceTest {
         
         when(rolRepositorio.findAll()).thenReturn(roles);
 
-        List<Rol> resultado = rolServicio.obtenerTodos();
+        List<Rol> resultado = rolServicio.getAll();
 
         assertEquals(2, resultado.size());
         verify(rolRepositorio, times(1)).findAll();
@@ -50,7 +50,6 @@ public class RolServiceTest {
 
     @Test
     void testObtenerPorId() {
-
         Rol rol = new Rol();
         rol.setId(1);
         rol.setNombre("ADMIN");
@@ -58,7 +57,7 @@ public class RolServiceTest {
         
         when(rolRepositorio.findById(1)).thenReturn(Optional.of(rol));
 
-        Rol resultado = rolServicio.obtenerPorId(1);
+        Rol resultado = rolServicio.getRolById(1);
 
         assertNotNull(resultado);
         assertEquals(1, resultado.getId());
