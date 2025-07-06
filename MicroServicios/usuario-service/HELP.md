@@ -9,11 +9,11 @@ The following was discovered as part of building this project:
 For further reference, please consider the following sections:
 
 * [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
-* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/3.4.5/maven-plugin)
-* [Create an OCI image](https://docs.spring.io/spring-boot/3.4.5/maven-plugin/build-image.html)
-* [Spring Web](https://docs.spring.io/spring-boot/3.4.5/reference/web/servlet.html)
-* [Spring Boot DevTools](https://docs.spring.io/spring-boot/3.4.5/reference/using/devtools.html)
-* [Spring Data JPA](https://docs.spring.io/spring-boot/3.4.5/reference/data/sql.html#data.sql.jpa-and-spring-data)
+* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/3.4.7/maven-plugin)
+* [Create an OCI image](https://docs.spring.io/spring-boot/3.4.7/maven-plugin/build-image.html)
+* [Spring Web](https://docs.spring.io/spring-boot/3.4.7/reference/web/servlet.html)
+* [Spring Boot DevTools](https://docs.spring.io/spring-boot/3.4.7/reference/using/devtools.html)
+* [Spring Data JPA](https://docs.spring.io/spring-boot/3.4.7/reference/data/sql.html#data.sql.jpa-and-spring-data)
 
 ### Guides
 The following guides illustrate how to use some features concretely:

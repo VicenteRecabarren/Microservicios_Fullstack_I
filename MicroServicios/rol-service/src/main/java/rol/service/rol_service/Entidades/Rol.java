@@ -1,4 +1,4 @@
-package rol.service.rol_service.Entidades;
+package rol.service.rol_service.entidades;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -7,34 +7,43 @@ import jakarta.persistence.Id;
 
 @Entity
 public class Rol {
-    private int id;
-    private String nombre;
-    private int usuarioid;
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    private String nombreRol;
+    private String nivelPermisos; // bajo - medio - alto
+    private String descripcion; // "Permite acceso de solo lectura a los cursos"
+    private boolean estadoRol; // activo - desactivado
 
-    public int getId(){
+    public int getId() {
         return id;
     }
-
-    public void setId(int id){
+    public void setId(int id) {
         this.id = id;
     }
-
-    public String getNombre(){
-        return nombre;
+    public String getNombreRol() {
+        return nombreRol;
     }
-    public void setNombre(String nombre){
-        this.nombre = nombre;
+    public void setNombreRol(String nombreRol) {
+        this.nombreRol = nombreRol;
     }
-
-    public int getUsuarioId(){
-        return usuarioid;
+    public String getNivelPermisos() {
+        return nivelPermisos;
     }
-
-    public void setUsuarioId(int usuarioid){
-        this.usuarioid = usuarioid;
+    public void setNivelPermisos(String nivelPermisos) {
+        this.nivelPermisos = nivelPermisos;
+    }
+    public String getDescripcion() {
+        return descripcion;
+    }
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+    public boolean isEstadoRol() {
+        return estadoRol;
+    }
+    public void setEstadoRol(boolean estadoRol) {
+        this.estadoRol = estadoRol;
     }
 
     public Rol(){

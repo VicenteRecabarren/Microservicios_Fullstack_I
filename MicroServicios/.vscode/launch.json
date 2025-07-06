@@ -1,0 +1,65 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-UsuarioServiceApplication<usuario-service>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "usuario.service.usuario_service.UsuarioServiceApplication",
+            "projectName": "usuario-service",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=52719 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=usuario-service"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-SoporteServiceApplication<soporte-service>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "soporte.service.soporte_service.SoporteServiceApplication",
+            "projectName": "soporte-service",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-RolServiceApplication<rol-service>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "rol.service.rol_service.RolServiceApplication",
+            "projectName": "rol-service",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ProveedoresServiceApplication<proveedores-service>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "proveedores.service.proveedores_service.ProveedoresServiceApplication",
+            "projectName": "proveedores-service",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-FacturacionServiceApplication<facturacion-service>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "facturacion.service.facturacion_service.FacturacionServiceApplication",
+            "projectName": "facturacion-service",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-CursoServiceApplication<curso-service>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "curso.service.curso_service.CursoServiceApplication",
+            "projectName": "curso-service",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
