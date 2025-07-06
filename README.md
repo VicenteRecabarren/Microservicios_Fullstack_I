@@ -10,7 +10,7 @@ git checkout definitive
 
 ## Ramas del Proyecto
 
-- **`definitive`** - Versión final del examen ✅
+- **`definitive`** - Versión final del examen
 - `main` - Rama principal (ignorar)
 - `config` - Configuraciones (ignorar)
 
