@@ -1,0 +1,6 @@
+cursos\service\cursos_service\CursosServiceApplication.class
+cursos\service\cursos_service\Configuracion\SwaggerConfig.class
+cursos\service\cursos_service\Repositorio\CursoRepositorio.class
+cursos\service\cursos_service\Entidades\Curso.class
+cursos\service\cursos_service\Controlador\CursoController.class
+cursos\service\cursos_service\Servicio\CursoServicio.class

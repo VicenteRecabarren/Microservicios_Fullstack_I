@@ -13,11 +13,20 @@ public class AlertaServicio {
 
     @Autowired
     private AlertaRepositorio alertaRepositorio;
+    
     public List<Alerta> getAll(){
+        return alertaRepositorio.findAll();
+    }
+    
+    public List<Alerta> obtenerTodos(){
         return alertaRepositorio.findAll();
     }
 
     public Alerta getCursoById(int id){
+        return alertaRepositorio.findById(id).orElse(null);
+    }
+    
+    public Alerta obtenerPorId(int id){
         return alertaRepositorio.findById(id).orElse(null);
     }
 

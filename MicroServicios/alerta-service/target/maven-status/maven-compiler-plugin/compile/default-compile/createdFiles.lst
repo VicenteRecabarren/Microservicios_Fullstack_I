@@ -1,0 +1,6 @@
+alerta\service\alerta_service\Servicio\AlertaServicio.class
+alerta\service\alerta_service\Entidades\Alerta.class
+alerta\service\alerta_service\Configuracion\SwaggerConfig.class
+alerta\service\alerta_service\Repositorio\AlertaRepositorio.class
+alerta\service\alerta_service\Controlador\AlertaControlador.class
+alerta\service\alerta_service\AlertaServiceApplication.class

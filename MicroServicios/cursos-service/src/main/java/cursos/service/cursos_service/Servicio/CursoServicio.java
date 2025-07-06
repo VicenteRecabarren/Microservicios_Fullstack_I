@@ -13,11 +13,20 @@ public class CursoServicio {
 
     @Autowired
     private CursoRepositorio cursoRepositorio;
-    public List<Curso>getAll(){
+    
+    public List<Curso> getAll(){
+        return cursoRepositorio.findAll();
+    }
+    
+    public List<Curso> obtenerTodos(){
         return cursoRepositorio.findAll();
     }
 
     public Curso getCursoById(int id){
+        return cursoRepositorio.findById(id).orElse(null);
+    }
+    
+    public Curso obtenerPorId(int id){
         return cursoRepositorio.findById(id).orElse(null);
     }
 
