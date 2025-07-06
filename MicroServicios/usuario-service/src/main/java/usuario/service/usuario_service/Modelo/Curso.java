@@ -1,30 +1,37 @@
-package usuario.service.usuario_service.Modelo;
+package usuario.service.usuario_service.modelo;
 
 public class Curso {
-    public String nombre;
-    public String descripcion;
-    public String seccion;
+    private int id;
+    private String titulo;
+    private String nivel;
+    private int duracionHoras;
 
-    public Curso(){
-        
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+    public String getTitulo() {
+        return titulo;
+    }
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+    public String getNivel() {
+        return nivel;
+    }
+    public void setNivel(String nivel) {
+        this.nivel = nivel;
+    }
+    public int getDuracionHoras() {
+        return duracionHoras;
+    }
+    public void setDuracionHoras(int duracionHoras) {
+        this.duracionHoras = duracionHoras;
+    }
+    public Curso() {
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-    public String getDescripcion() {
-        return descripcion;
-    }
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
-    public String getSeccion() {
-        return seccion;
-    }
-    public void setSeccion(String seccion) {
-        this.seccion = seccion;
-    }
 }
+

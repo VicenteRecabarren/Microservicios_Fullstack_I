@@ -1,33 +1,34 @@
-package rol.service.rol_service.Servicio;
+package rol.service.rol_service.servicio;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import rol.service.rol_service.Entidades.Rol;
-import rol.service.rol_service.Repositorio.RolRepositorio;
+import rol.service.rol_service.entidades.Rol;
+import rol.service.rol_service.repositorio.RolRepository;
 
 @Service
 public class RolServicio {
 
     @Autowired
-    private RolRepositorio rolRepositorio;
-    public List<Rol>getAll(){
-        return rolRepositorio.findAll();
+    private RolRepository rolRepository;
+
+    public List<Rol> obtenerTodosLosRoles(){
+        return rolRepository.findAll();
     }
 
-    public Rol getRolById(int id){
-        return rolRepositorio.findById(id).orElse(null);
+    public Rol conseguirRolPorId(int id){
+        return rolRepository.findById(id).orElse(null);
     }
 
-    public Rol save(Rol rol){
-        Rol nuevoRol = rolRepositorio.save(rol);
+    public Rol guardarRol(Rol rol){
+        Rol nuevoRol = rolRepository.save(rol);
         return nuevoRol;
     }
 
-    public List<Rol> byUsuarioId(int usuarioid){
-        return rolRepositorio.findByUsuarioId(usuarioid);
+    public void borrarRol (int id){
+        rolRepository.deleteById(id);
     }
 
 }
